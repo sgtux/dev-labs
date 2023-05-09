@@ -1,0 +1,13 @@
+{
+  "/api": {
+      "target": "https://localhost:5001",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+  },
+  "/socket.io": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

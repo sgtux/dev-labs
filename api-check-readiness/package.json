@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "node index.js",
+    "dev": "concurrently \"nodemon --watch src index.js\" \"node start-client.js\"",
+    "build": "node build-client.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "node-notifier": "^5.4.0",
+    "opn": "^6.0.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.1"
+  }
+}

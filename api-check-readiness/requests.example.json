@@ -1,0 +1,31 @@
+[
+  {
+    "method": "get",
+    "url": "http://127.0.0.1/users",
+    "body": {},
+    "enabled": true
+  },
+  {
+    "method": "post",
+    "url": "http://127.0.0.1/users",
+    "headers": {
+      "Authorization": "Bearer token_bearer"
+    },
+    "body": {
+      "name": "teste check readiness"
+    },
+    "enabled": true
+  },
+  {
+    "method": "put",
+    "url": "http://127.0.0.1/users",
+    "body": {},
+    "enabled": true
+  },
+  {
+    "method": "delete",
+    "url": "http://127.0.0.1/users",
+    "body": {},
+    "enabled": true
+  }
+]

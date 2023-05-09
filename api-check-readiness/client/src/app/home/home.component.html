@@ -1,0 +1,19 @@
+<h3>Services</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col-upper" scope="col">Method</th>
+      <th class="col-upper" scope="col">Url</th>
+      <th class="col-upper" scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of requests">
+      <td class="col-upper">{{ s.method }}</td>
+      <td>{{ s.url }}</td>
+      <td [class]="getClass(s)">
+        <div></div>
+      </td>
+    </tr>
+  </tbody>
+</table>

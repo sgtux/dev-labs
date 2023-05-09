@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+.ripple {
+  display: flex;
+  justify-content: center;
+}
+
+.ripple div {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px black;
+}
+
+.ripple.green div {
+  background-color: green;
+  box-shadow: 0px 0px 10px green;
+}
+
+.ripple.red div {
+  background-color: red;
+  box-shadow: 0px 0px 10px red;
+}
+
+.ripple.gray div {
+  background-color: gray;
+  box-shadow: 0px 0px 10px gray;
+}
+
+.col-upper {
+  text-transform: uppercase;
+}
