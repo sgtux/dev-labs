@@ -1,0 +1,13 @@
+.box {
+    margin-top: 100px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.box table {
+    width: 300px;
+}
+
+.box table td, .box table th {
+    text-align: center;
+}

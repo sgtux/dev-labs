@@ -1,0 +1,32 @@
+version: '2.2'
+
+services:
+
+  nginx:
+    image: nginx
+    networks:
+      lan:
+        ipv4_address: 172.30.30.10
+    volumes:
+      - ./Nginx/files/nginx.conf:/etc/nginx/nginx.conf
+
+  dotnetapp:
+    build: ./DotNetApp
+    networks:
+      lan:
+        ipv4_address: 172.30.30.20
+
+  nodeapp:
+    environment:
+      - NODE_PORT=80
+    build: ./NodeApp
+    networks:
+      lan:
+        ipv4_address: 172.30.30.30
+
+networks:
+  lan:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.30.0/24
