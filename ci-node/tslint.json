@@ -1,0 +1,27 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+        "max-line-length": {
+            "options": [
+                120
+            ]
+        },
+        "no-any": true,
+        "no-empty": true,
+        "no-unused-variable": {
+            "severity": "error"
+        },
+        "object-literal-sort-keys": false,
+        "no-var-keyword": true,
+        "semicolon": false,
+        "quotemark": [
+            false,
+            "simple"
+        ],
+        "arrow-parens": false,
+        "eofline": false,
+        "curly": false,
+        "member-access": false,
+        "trailing-comma": false
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint && npm test",
+            "pre-push": "npm run lint && npm test"
+        }
+    },
+    "scripts": {
+        "start": "nodemon --watch src --exec ts-node src/server.ts",
+        "build": "npm run lint && tsc",
+        "lint": "tslint --project tsconfig.json --fix",
+        "precommit": "npm run build"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "nodemon": "^1.19.2",
+        "socket.io": "^2.3.0",
+        "tree-kill": "^1.2.1"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.1",
+        "@types/node": "^12.7.5",
+        "@types/socket.io": "^2.1.2",
+        "husky": "^3.0.5",
+        "ts-node": "^8.4.1",
+        "tslint": "^5.20.0",
+        "typescript": "^3.6.3"
+    }
+}

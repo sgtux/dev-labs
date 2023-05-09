@@ -1,0 +1,9 @@
+client/node_modules
+node_modules
+projects.json
+logs
+publish
+dist
+yarn-error.log
+package-lock.json
+client/package-lock.json
