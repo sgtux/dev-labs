@@ -1,0 +1,20 @@
+version: "3"
+services:
+
+    api:
+        build: ./JwtRSA.Api
+        networks:
+            lan:
+                ipv4_address: 172.50.50.10
+
+    oauth:
+        build: ./JwtRSA.Oauth
+        networks:
+            lan:
+                ipv4_address: 172.50.50.20
+
+networks:
+    lan:
+        ipam:
+            config:
+                - subnet: 172.50.50.0/24

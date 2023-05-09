@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtRSA.Api", "JwtRSA.Api\JwtRSA.Api.csproj", "{9C2C1B67-DB82-4594-9DBA-8DE6A87CAB50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtRSA.Oauth", "JwtRSA.Oauth\JwtRSA.Oauth.csproj", "{A8CE9978-733B-48A7-849B-BAA452730359}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C2C1B67-DB82-4594-9DBA-8DE6A87CAB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2C1B67-DB82-4594-9DBA-8DE6A87CAB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2C1B67-DB82-4594-9DBA-8DE6A87CAB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2C1B67-DB82-4594-9DBA-8DE6A87CAB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8CE9978-733B-48A7-849B-BAA452730359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8CE9978-733B-48A7-849B-BAA452730359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8CE9978-733B-48A7-849B-BAA452730359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8CE9978-733B-48A7-849B-BAA452730359}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
