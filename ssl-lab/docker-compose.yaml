@@ -1,17 +1,28 @@
-version: "3"
 services:
 
-    storage:
-        image: sgtux/storage-ssllab
+    api-client:
+        build: ./ApiClient
+        environment:
+            STORAGE_API_URL: "https://172.50.50.20/"
         networks:
             lan:
                 ipv4_address: 172.50.50.10
 
-    threat:
-        image: sgtux/threat-ssllab
+    storage:
+        build: ./Storage
+        environment:
+            SslAllowedProtocols: ssl,tls12,tls13
         networks:
             lan:
                 ipv4_address: 172.50.50.20
+        volumes:
+            - ./Storage/openssl.cnf:/etc/ssl/openssl.cnf
+
+    threat:
+        build: ./Threat
+        networks:
+            lan:
+                ipv4_address: 172.50.50.30
 
 networks:
     lan:

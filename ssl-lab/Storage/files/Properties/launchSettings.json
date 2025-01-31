@@ -19,12 +19,13 @@
     },
     "Storage": {
       "commandName": "Project",
-      "dotnetRunMessages": "true",
-      "launchBrowser": true,
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
       "launchUrl": "swagger",
-      "applicationUrl": "https://192.168.1.101:5051;http://192.168.1.101:5052",
+      "applicationUrl": "https://localhost:5051",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SslAllowedProtocols": "tls12,tls13"
       }
     }
   }

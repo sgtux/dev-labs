@@ -13,7 +13,6 @@ namespace Storage.Helpers
             var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var publicCertPath = Path.Join(assemblyPath, "cert.pem");
             var privateCertPath = Path.Join(assemblyPath, "key.pem");
-            var exists = File.Exists(privateCertPath);
             X509Certificate2 sslCert = CreateFromPublicPrivateKey(publicCertPath, privateCertPath);
             return new X509Certificate2(sslCert.Export(X509ContentType.Pkcs12));
         }
@@ -23,7 +22,7 @@ namespace Storage.Helpers
             byte[] publicPemBytes = File.ReadAllBytes(publicCertPath);
             using var publicX509 = new X509Certificate2(publicPemBytes);
             var privateKeyText = File.ReadAllText(privateCertPath);
-            var privateKeyBlocks = privateKeyText.Split("-", System.StringSplitOptions.RemoveEmptyEntries);
+            var privateKeyBlocks = privateKeyText.Split("-", StringSplitOptions.RemoveEmptyEntries);
             var privateKeyBytes = Convert.FromBase64String(privateKeyBlocks[1]);
 
             using RSA rsa = RSA.Create();

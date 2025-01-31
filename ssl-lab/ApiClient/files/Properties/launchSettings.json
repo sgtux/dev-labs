@@ -17,14 +17,15 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TestWebApiClient": {
+    "ApiClient": {
       "commandName": "Project",
-      "dotnetRunMessages": "true",
-      "launchBrowser": true,
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5050",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "STORAGE_API_URL": "https://localhost:5051/"
       }
     }
   }
