@@ -1,0 +1,46 @@
+version: "3"
+services:
+
+    localstack:
+        image: localstack/localstack:3
+        environment:
+            - SERVICES=s3
+            - DEFAULT_REGION=us-east-1
+        networks:
+            lan:
+                ipv4_address: 172.51.51.10
+
+    createbucket:
+        image: amazon/aws-cli:2.15.0
+        entrypoint: ["sh", "-c", "sleep 5 && aws --endpoint-url=http://172.51.51.10:4566 s3 mb s3://lab-bucket"]
+        environment:
+            - AWS_ACCESS_KEY_ID=test
+            - AWS_SECRET_ACCESS_KEY=test
+            - AWS_DEFAULT_REGION=us-east-1
+        depends_on:
+            - localstack
+        networks:
+            lan:
+                ipv4_address: 172.51.51.11
+
+    api:
+        build: .
+        environment:
+            - S3__ServiceURL=http://172.51.51.10:4566
+            - S3__BucketName=lab-bucket
+            - AWS_ACCESS_KEY_ID=test
+            - AWS_SECRET_ACCESS_KEY=test
+            - AWS_DEFAULT_REGION=us-east-1
+        depends_on:
+            - localstack
+        ports:
+            - "5000:80"
+        networks:
+            lan:
+                ipv4_address: 172.51.51.20
+
+networks:
+    lan:
+        ipam:
+            config:
+                - subnet: 172.51.51.0/24
